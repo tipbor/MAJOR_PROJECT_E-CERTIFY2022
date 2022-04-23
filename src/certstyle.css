@@ -1,0 +1,42 @@
+/*.cert {
+  height: 130vh;
+  background: url("cert.jpg") no-repeat;
+  background-size: cover;
+  margin-left: 150px;
+}
+*/
+.pc {
+  width: 200vh;
+  background: url("b3.jpg") no-repeat;
+  background-size: cover;
+}
+#fname {
+  font-size: 55px;
+  
+  margin-top: -390px;
+  margin-left: 500px;
+  position: absolute;
+}
+
+#course {
+  font-size: 23px;
+  margin-top: -250px;
+  margin-left: 600px;
+  font-weight: bold;
+  position: absolute;
+}
+
+#txh {
+  margin-top: -200px;
+  margin-left: 400px;
+  position: absolute;
+}
+
+#id {
+  margin-top: 1px;
+  margin-left: 0px;
+}
+
+.btn {
+  margin-top: 10px;
+}
