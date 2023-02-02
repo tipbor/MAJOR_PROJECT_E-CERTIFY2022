@@ -17,9 +17,9 @@ class Navhead extends Component {
             <Nav.Item className="mt-2 ml-2 mr-3">
               <Link to="/verify">Verify</Link>
             </Nav.Item>
-            <Nav.Item className="mt-2 ml-2 mr-3">
+            {/* <Nav.Item className="mt-2 ml-2 mr-3">
               <Link to="/reg">Register</Link>
-            </Nav.Item>
+            </Nav.Item> */}
           </Nav>
         </Navbar.Collapse>
       </Navbar>

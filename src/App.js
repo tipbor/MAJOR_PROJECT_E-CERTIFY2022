@@ -107,54 +107,18 @@ class App extends Component {
     return (
       <div className="App">
         <Router>
-          {/* <Navhead /> */}
-          {/* <Route
-            path="/"
-            exact
-            render={() => <Forms addcertificate={this.add} />}
-          />
-          <Route
-            path="/verify"
-            render={() => (
-              <Getcert
-                getcertificate={this.get}
-                yes={this.state.tofound}
-                details={this.state.output}
-              />
-            )}
-          />
-          <Route
-            path="/view"
-            component={() => (
-              <Certificate
-                sname={this.state.name}
-                course={this.state.course}
-                txh={this.state.txh}
-                id={this.state.id}
-              />
-            )}
-          />
-          <Route path="/intro" component={Intro} />
-          <Route path="/reg" component={Reg} />
-          <Route path="/upload" component={Ipfsupload} />
-          <Route path="/" exact component={Ipfsupload} /> */}
+          
+       
           <Route exact path="/" component={Home} />
             
-            {/* This route is for about component 
-            with exact path "/about", in component 
-            props we passes the imported component*/}
+            
             <Route path="/institute" component={Institute} />
               
-            {/* This route is for contactus component
-            with exact path "/contactus", in 
-            component props we passes the imported component*/}
+        
             <Route path="/student" component={Student} />
             <Route path="/thirdparty" component={Thirdparty} />
               
-            {/* If any route mismatches the upper 
-            route endpoints then, redirect triggers 
-            and redirects app to home component with to="/" */}
-            {/* <Redirect to="/" /> */}
+           
         </Router>
       </div>
     );

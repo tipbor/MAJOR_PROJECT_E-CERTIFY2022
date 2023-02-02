@@ -51,8 +51,7 @@ class IpfsUpload1 extends Component {
         this.setState({gasUsed:"waiting..."});
 
         // get Transaction Receipt in console on click
-        // See: https://web3js.readthedocs.io/en/1.0/web3-eth.html#gettransactionreceipt
-        await web3.eth.getTransactionReceipt(this.state.transactionHash, (err, txReceipt)=>{
+          await web3.eth.getTransactionReceipt(this.state.transactionHash, (err, txReceipt)=>{
           console.log(err,txReceipt);
           this.setState({txReceipt});
         }); //await for getTransactionReceipt
@@ -78,7 +77,6 @@ class IpfsUpload1 extends Component {
       this.setState({ethAddress});
 
       //save document to IPFS,return its hash#, and set hash# to state
-      //https://github.com/ipfs/interface-ipfs-core/blob/master/SPEC/FILES.md#add 
       await ipfs.add(this.state.buffer, (err, ipfsHash) => {
         console.log(err,ipfsHash);
         //setState by setting ipfsHash to ipfsHash[0].hash 
@@ -86,8 +84,7 @@ class IpfsUpload1 extends Component {
 
         // call Ethereum contract method "sendHash" and .send IPFS hash to etheruem contract 
         //return the transaction hash from the ethereum contract
-        //see, this https://web3js.readthedocs.io/en/1.0/web3-eth-contract.html#methods-mymethod-send
-        
+                
         storehash.methods.sendHash(this.state.ipfsHash).send({
           from: accounts[0] 
         }, (error, transactionHash) => {
@@ -102,7 +99,7 @@ class IpfsUpload1 extends Component {
       return (
         <div className="App" id="printcertificate">
           <header className="App-header">
-            <h1> UPLOAD FILES</h1>
+            <h1> UPLOAD CERTIFICATE</h1>
           </header>
           
           <hr />
